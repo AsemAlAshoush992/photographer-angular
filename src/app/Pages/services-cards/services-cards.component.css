@@ -1,0 +1,96 @@
+.card {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 1.5rem;
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.quantity {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.btn-custom {
+    background-color: #28a745 !important;
+    color: #fff !important;
+    border-radius: 50px !important;
+    padding: 10px 20px !important;
+    transition: background-color 0.3s !important;
+}
+
+.btn-custom:hover {
+    background-color: #197d30 !important;
+}
+
+
+
+/* إعادة تعيين التنسيق الافتراضي */
+.bo-links {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* مسافة بين العناصر */
+    list-style: none; /* إلغاء أي تنسيقات للـ breadcrumbs */
+    padding: 0;
+    margin: 0;
+    direction: ltr; /* الاتجاه الافتراضي يكون من اليسار إلى اليمين */
+}
+
+.bo-links a {
+    text-decoration: none; /* إزالة التسطير أسفل الروابط */
+    color: inherit; /* جعل النص يأخذ لون النص الافتراضي */
+    font-weight: 500; /* تنسيق النص في الروابط */
+}
+
+/* إضافة الإشارة (>) بعد الروابط */
+.bo-links a::after {
+    content: '>';
+    margin: 0 8px; /* ضبط المسافة بين الإشارة والنص */
+    color: #000; /* لون الإشارة */
+}
+
+/* إزالة الإشارة من العنصر الأخير */
+.bo-links span::after {
+    content: '';
+}
+
+/* عند التحول للغة العربية (RTL) */
+.bo-links.rtl {
+    direction: rtl; /* عكس اتجاه النص */
+}
+
+.bo-links.rtl a::after {
+    content: '<'; /* عكس الإشارة إلى اليسار */
+    margin: 0 8px; /* مسافة بين الإشارة والنص */
+}

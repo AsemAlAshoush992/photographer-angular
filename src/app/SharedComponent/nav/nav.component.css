@@ -1,0 +1,136 @@
+
+button{
+    background-color: #009603 !important;
+    color: white !important;
+    margin-top: 20px !important;
+}
+
+
+.btn{
+    margin-right: 25px;
+}
+.btn:hover{
+    background-color: #027203;
+    transform: scale(1.1);
+}
+
+
+li a{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #111111;
+    display: block;
+    padding: 32px 8px 30px;
+    position: relative;
+    font-family: "Quantico", sans-serif;
+}
+  
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+    position: relative;
+}
+
+
+
+
+
+
+
+/* ضبط طول navbar */
+.navbar {
+    width: 70%; /* تعديل العرض كما تريد */
+    margin: 0 auto; /* محاذاة الوسط مع مسافات من اليمين واليسار */
+    height: 115px;
+  }
+  
+  /* النمط العام للروابط */
+  .navbar-nav .nav-item .nav-link {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s;
+  }
+  
+  .navbar-nav .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: #009603;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  /* تأثير hover */
+  .navbar-nav .nav-item .nav-link:hover::after {
+    opacity: 1;
+  }
+  
+  /* تأثير النقر والروابط النشطة */
+  .navbar-nav .nav-item .nav-link.router-link-active::after {
+    opacity: 1;
+  }
+  
+  /* تجاهل آخر ثلاث روابط */
+  .navbar-nav .nav-item:nth-last-child(-n+3) .nav-link::after {
+    display: none;
+  }
+  
+  /* أنماط الأزرار */
+  .navbar-nav .nav-item .btn, 
+  .navbar-nav .nav-item .support-btn {
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+    top: 7px; /* تعديل موضع الأزرار ليكون على نفس مستوى الروابط */
+  }
+  
+  
+  
+  /*ٌResponsive*/
+  
+  
+  /* إظهار زر القائمة عند عرض الشاشات الصغيرة (أقل من 992px) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    display: none; /* إخفاء القائمة بشكل افتراضي */
+  }
+  .navbar-toggler {
+    display: block; /* إظهار زر القائمة */
+    background-color: #009603; /* لون خلفية الزر */
+    border: none; /* إزالة الحدود */
+    margin-left: auto; /* دفع الزر إلى الجهة اليمنى */
+  }
+}
+
+/* عند فتح القائمة في الشاشات الصغيرة */
+@media (max-width: 991.98px) {
+  .navbar-collapse.show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* تعديل الموضع ليكون أسفل الـnavbar */
+    background-color: white; /* لون خلفية القائمة */
+    width: 100%;
+    left: 0;
+    z-index: 1000; /* جعل القائمة تظهر فوق العناصر الأخرى */
+  }
+
+  /* تعديل أنماط الروابط لتصبح عمودية */
+  .navbar-nav .nav-item {
+    margin-right: 0;
+    width: 100%;
+  }
+  .navbar-nav .nav-item .nav-link, 
+  .navbar-nav .nav-item .btn {
+    padding: 15px;
+    text-align: left; /* محاذاة النص لليسار */
+    width: 100%;
+    border-bottom: 1px solid #ddd; /* إضافة حد سفلي بين الروابط */
+  }
+}

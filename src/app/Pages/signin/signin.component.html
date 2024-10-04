@@ -1,0 +1,54 @@
+<body class="img js-fullheight" style="background-image: url(../../../assets/Login/images/Photographer.webp); background-size: cover; opacity: 0.8;
+background-position: center;
+background-repeat: no-repeat;
+height: 100vh;">
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section" style="font-size: 45px;">{{'loginPage.title' | translate}}</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="login-wrap p-0">
+                        <h3 class="mb-4 text-center">{{'loginPage.subTitle' | translate}}</h3>
+                        <form  class="signin-form"   #loginForm="ngForm"  (ngSubmit)="Login()">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="{{'loginPage.usernamePlaceholder' | translate}}" required
+                                    [(ngModel)]="obj.userName" name="userName"    #userName="ngModel" autofocus >
+                                    <div *ngIf="userName.invalid && userName.touched" class="text-danger" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}">{{'loginPage.usernameError' | translate}}</div>
+                            </div>
+                            <div class="form-group">
+                                <input id="password-field" minlength="9" maxlength="30" [type]="passwordFieldType"
+                                    class="form-control" placeholder="{{'loginPage.passwordPlaceholder' | translate}}" required [(ngModel)]="obj.password"
+                                    name="password"  #password="ngModel">
+                                <span class="fa fa-fw field-icon" style="color: rgb(169, 198, 106);"
+                                    [ngClass]="{'fa-eye': passwordFieldType === 'password', 'fa-eye-slash': passwordFieldType === 'text'}"
+                                    (click)="togglePassword()"></span>
+                                    <div *ngIf="password.invalid && password.touched" class="text-danger" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}">{{'loginPage.passwordError' | translate}}</div>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary submit px-3"
+                                [disabled]="loginForm.invalid">{{'loginPage.signInButton' | translate}}</button>
+                            </div>
+                            <div class="form-group d-md-flex">
+                                <div class="w-50">
+                                    <label class="checkbox-wrap checkbox-primary">{{'loginPage.rememberMe' | translate}}
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                <div class="w-50 text-md-right">
+                                    <a routerLink="/resetpassword" style="color: #fff">{{'loginPage.forgotPassword' | translate}}</a>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="w-100 text-center">{{'loginPage.registerMessage' | translate}} <a routerLink="/signup"
+                                style="color: white; font-weight: 600;">{{'loginPage.registerLink' | translate}}</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>

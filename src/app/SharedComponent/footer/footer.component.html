@@ -1,0 +1,69 @@
+<!-- Footer Section Begin -->
+<footer class="footer-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="fs-about">
+            <div class="fa-logo">
+              <a href="#">
+                <img src="../../../assets/img/New Logo2.png" alt="" height="90px" width="200px">
+              </a>
+            </div>
+            <p [ngStyle]="{'direction': (locale === 'ar') ? 'rtl' : 'ltr', 'unicode-bidi': 'embed'}">{{ 'footer.about' | translate }} 
+            </p>
+              <div class="fa-social">
+                <a href="https://www.facebook.com/asemaleshoush?mibextid=ZbWKwL" ><i class="fa fa-facebook" style="color: #3b5998;"></i></a>
+                <a href="https://www.linkedin.com/in/asem-alashoush-a33a16312" ><i class="fa fa-linkedin" style="color: #0077b5;"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=962795747446" ><i class="fa fa-whatsapp" style="color: #25d366;"></i></a>
+                <a href="https://www.instagram.com/aleshoushasem?igsh=M21haG85cW5tcmZx"><i class="fa fa-instagram" style="color: #e1306c;"></i></a>
+            </div>            
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="fs-widget">
+            <h5>{{ 'contactInfo.Instagram' | translate }}</h5>
+            <div class="fw-instagram">
+              <img src="../../../assets/img/instagram/insta-1.jpg" alt="">
+              <img src="../../../assets/img/instagram/insta-2.jpg" alt="">
+              <img src="../../../assets/img/instagram/insta-3.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="fs-widget" >
+            <h5>{{ 'contactInfo.Quicklinks' | translate }}</h5>
+            <ul >
+              <li><a routerLink="">{{ 'footer.home' | translate }}</a></li>
+              <li><a routerLink="/about-me">{{ 'footer.aboutb' | translate }}</a></li>
+              <li><a routerLink="/contact-request">{{ 'footer.contact' | translate }}</a></li>
+            </ul>
+            <ul>
+              <li><a routerLink="/pubic-gallery">{{ 'footer.gallery' | translate }}</a></li>
+              <li><a routerLink="/blog-cards">{{ 'footer.blogs' | translate }}</a></li>
+              <li><a routerLink="/category">{{ 'footer.categories' | translate }}</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="fs-widget" style="direction: auto; unicode-bidi: embed;">
+            <h5>{{ 'contactInfo.ContactInformation' | translate }}</h5>
+            <p >{{ 'contactInfo.emailAddress' | translate }} : <a href="mailto:asem.saleh992@yahoo.com" style="color: #fff; text-decoration: none;" [ngStyle]="{'direction': (locale === 'ar') ? 'rtl' : 'ltr', 'unicode-bidi': 'embed'}">{{ 'contactInfo.email' | translate }}</a></p>
+            <p >{{ 'contactInfo.phoneNumber' | translate }} : <a href="tel:+1234567890" style="color: #fff; text-decoration: none;" [ngStyle]="{'direction': (locale === 'ar') ? 'rtl' : 'ltr', 'unicode-bidi': 'embed'}">{{ 'contactInfo.phone' | translate }}</a></p>
+            <p >{{ 'contactInfo.addresst' | translate }} :  <span style="color: #fff; text-decoration: none;">  {{ 'contactInfo.address' | translate }}</span></p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="copyright-text">
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              &copy;
+              <script>document.write(new Date().getFullYear());</script> 2024 PhotoVerse. All rights reserved
+              <i class="fa fa-heart" aria-hidden="true"></i> by 
+              <a target="_blank" style="color: blue;">Asem Alashoush</a>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer Section End -->

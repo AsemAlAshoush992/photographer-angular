@@ -1,0 +1,125 @@
+<!--NavBar Section Begin-->
+<app-nav></app-nav>
+<!--NavBar Section End-->
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bo-links">
+                    <a href="./index.html"><i class="fa fa-home"></i> {{'breadcrumb.home' | translate}} </a>
+                    <span>{{'breadcrumb.contact' | translate}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- Contact Section Begin -->
+<div class="map">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3384.250582800067!2d35.8681375!3d31.9812219!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151ca1b56d62132d%3A0x78ff50bc77b4dd59!2sAl-Madina%20Al-Monawara%20St%2C%20Amman!5e0!3m2!1sen!2sjo!4v1721905503948!5m2!1sen!2sjo"
+        height="635" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+</div>
+<section class="contact-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="contact-text" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}">
+                    <h3 [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}">{{'contactSection.getInTouch' | translate}}</h3>
+                    <p>{{'contactSection.contactMessage' | translate}}</p>
+                        <div class="ct-item" [ngStyle]="{'margin-left': (locale === 'ar') ? '58px' : '0px',
+                            'margin-right' :(locale === 'ar') ? '15px' : '0px' 
+                        }">
+                            <div class="ct-icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="ct-text">
+                                <h5>{{'contactSection.address' | translate}}</h5>
+                                <p>{{'contactSection.addressValue' | translate}}</p>
+                            </div>
+                        </div>
+                        <div class="ct-item" [ngStyle]="{'margin-left': (locale === 'ar') ? '58px' : '0px',
+                            'margin-right' :(locale === 'ar') ? '15px' : '0px' }">
+                            <div class="ct-icon">
+                                <i class="fa fa-mobile"></i>
+                            </div>
+                            <div class="ct-text">
+                                <h5>{{'contactSection.phone' | translate}}</h5>
+                                <ul>
+                                    <li>{{'contactSection.phoneValues.0' | translate}}</li>
+                                    <li>{{'contactSection.phoneValues.1' | translate}}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ct-item" [ngStyle]="{'margin-left': (locale === 'ar') ? '58px' : '0px',
+                            'margin-right' :(locale === 'ar') ? '15px' : '0px' }">
+                            <div class="ct-icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="ct-text">
+                                <h5>{{'contactSection.email' | translate}}</h5>
+                                <p>
+                                    {{'contactSection.emailValue' | translate}}
+                                </p>
+                            </div>
+                        </div>
+                        
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="contact-form" >
+                    <h3 [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}">{{'contactSection.workWithMe' | translate}}</h3>
+                    <form #contactForm="ngForm" (ngSubmit)="Contact()"  [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}">
+                        <div class="form-group">
+                            <label for="name">{{'contactSection.formLabels.fullName' | translate}} <span class="required">*</span></label>
+                            <input type="text" minlength="5" id="name" placeholder="{{ 'contactSection.formPlaceholders.fullName' | translate }}" required
+                                [(ngModel)]="contactObj.clientName" name="clientName" #clientName="ngModel">
+                            <div *ngIf="clientName.invalid && clientName.touched" class="text-danger">{{'contactSection.formLabels.fullName' | translate}} {{'contactSection.formErrors.required' | translate}}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">{{'contactSection.formLabels.email' | translate}} <span class="required">*</span></label>
+                            <input type="email" id="email" placeholder="{{ 'contactSection.formPlaceholders.email' | translate }}" required
+                                [(ngModel)]="contactObj.email" name="email" #email="ngModel">
+                            <div *ngIf="email.invalid && email.touched" class="text-danger">{{'contactSection.formLabels.email' | translate}} {{'contactSection.formErrors.required' | translate}}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">{{'contactSection.formLabels.phone' | translate}} <span class="required">*</span></label>
+                            <input type="text" maxlength="14" minlength="14" id="phone" placeholder="{{ 'contactSection.formPlaceholders.phone' | translate }}"
+                                required [(ngModel)]="contactObj.phone" name="phone" #phone="ngModel">
+                            <div *ngIf="phone.invalid && phone.touched" class="text-danger">{{'contactSection.formLabels.phone' | translate}} {{'contactSection.formErrors.required' | translate}}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">{{'contactSection.formLabels.budget' | translate}} <span class="required">*</span></label>
+                            <input type="number" id="budget" placeholder="{{ 'contactSection.formPlaceholders.budget' | translate }}" required
+                                [(ngModel)]="contactObj.budget" name="budget" #budget="ngModel">
+                            <div *ngIf="budget.invalid && budget.touched" class="text-danger">{{'contactSection.formLabels.budget' | translate}} {{'contactSection.formErrors.required' | translate}}</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="purpose">{{'contactSection.formLabels.purpose' | translate}} <span class="required">*</span></label>
+                            <input type="text" id="purpose" placeholder="{{ 'contactSection.formPlaceholders.purpose' | translate }}" required
+                                [(ngModel)]="contactObj.purpose" name="purpose" #purpose="ngModel">
+                            <div *ngIf="purpose.invalid && purpose.touched" class="text-danger">{{'contactSection.formLabels.purpose' | translate}} {{'contactSection.formErrors.required' | translate}}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="description">{{'contactSection.formLabels.description' | translate}} <span class="required">*</span></label>
+                            <textarea id="description" placeholder="{{ 'contactSection.formPlaceholders.description' | translate }}"
+                                required [(ngModel)]="contactObj.description" name="description"
+                                #description="ngModel"></textarea>
+                            <div *ngIf="description.invalid && description.touched" class="text-danger">{{'contactSection.formLabels.description' | translate}} {{'contactSection.formErrors.required' | translate}}</div>
+                        </div>
+                        <button type="submit" class="site-btn" style="margin-right: 10px;"
+                            [disabled]="contactForm.invalid">{{'contactSection.submitButton' | translate}}</button>
+                        <button type="reset" class="site-btn">{{'contactSection.clearButton' | translate}}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section End -->
+<!-- Footer Section Begin -->
+<app-footer></app-footer>
+<!-- Footer Section End -->

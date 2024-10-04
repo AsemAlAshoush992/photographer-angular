@@ -1,0 +1,64 @@
+.required {
+    color: red;
+}
+
+.ct-icon {
+    display: flex; /* استخدام Flexbox */
+    align-items: center; /* لضمان التمركز العمودي */
+    justify-content: center; /* لضمان التمركز الأفقي */
+    width: 50px; /* عرض الدائرة */
+    height: 50px; /* ارتفاع الدائرة */
+    border-radius: 50%; /* لجعل العنصر دائريًا */
+    background-color: #f5f5f5; /* لون الخلفية للدائرة */
+}
+
+.ct-icon i {
+    font-size: 40px; /* حجم الأيقونة */
+    color: white; /* لون الأيقونة */
+}
+
+
+
+/* إعادة تعيين التنسيق الافتراضي */
+.bo-links {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* مسافة بين العناصر */
+    list-style: none; /* إلغاء أي تنسيقات للـ breadcrumbs */
+    padding: 0;
+    margin: 0;
+    direction: ltr; /* الاتجاه الافتراضي يكون من اليسار إلى اليمين */
+}
+
+.bo-links a {
+    text-decoration: none; /* إزالة التسطير أسفل الروابط */
+    color: inherit; /* جعل النص يأخذ لون النص الافتراضي */
+    font-weight: 500; /* تنسيق النص في الروابط */
+}
+
+/* إضافة الإشارة (>) بعد الروابط */
+.bo-links a::after {
+    content: '>';
+    margin: 0 8px; /* ضبط المسافة بين الإشارة والنص */
+    color: #000; /* لون الإشارة */
+}
+
+/* إزالة الإشارة من العنصر الأخير */
+.bo-links span::after {
+    content: '';
+}
+
+/* عند التحول للغة العربية (RTL) */
+.bo-links.rtl {
+    direction: rtl; /* عكس اتجاه النص */
+}
+
+.bo-links.rtl a::after {
+    content: '<'; /* عكس الإشارة إلى اليسار */
+    margin: 0 8px; /* مسافة بين الإشارة والنص */
+}
+
+
+
+
+

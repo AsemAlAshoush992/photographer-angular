@@ -1,0 +1,54 @@
+<app-nav></app-nav>
+<!-- Service 4 - Bootstrap Brain Component -->
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="bo-links">
+          <a href="./index.html"><i class="fa fa-home"></i> {{'breadcrumb.home' | translate}} </a>
+          <span>{{'breadcrumb.categories' | translate}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcrumb End -->
+<section class="bg-light py-5 py-xl-8">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+        <h3 class="fs-6 mb-2 text-secondary text-center text-uppercase">{{'categoryPage.title' | translate}}</h3>
+        <h2 class="display-5 mb-5 text-center">{{'categoryPage.description' | translate}}</h2>
+        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+      </div>
+    </div>
+  </div>
+
+  <div class="container overflow-hidden">
+    <div class="row gy-4 gy-xl-0">
+      <div class="col-12 col-sm-6 col-md-4 py-5" *ngFor="let category of categories">
+        <div class="card border-0 border-bottom border-success shadow-sm">
+          <div class="card-body text-center p-4 p-xxl-2">
+            <img [src]="category.imagePath" width="280px" height="290px"
+              style=" padding-bottom: 15px; padding-top: 10px; ">
+            <h4 class="mb-4">{{category.title}}</h4>
+            <p class="mb-4 text-secondary">{{category.description}}</p>
+            <a (click)="toServiceDetails(category.id)" style="cursor: pointer;" 
+              class="fw-bold text-decoration-none link-success">
+              {{'categoryPage.learnMore' | translate}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer Section Begin -->
+<app-footer></app-footer>
+<!-- Footer Section End -->

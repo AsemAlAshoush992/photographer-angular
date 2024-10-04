@@ -1,0 +1,33 @@
+<section class="vh-100 gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-12 col-lg-12 col-xl-6">
+                <div class="card card-stepper" style="border-radius: 16px;">
+                    <div class="card-header p-4">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h1>Thanks for your Order</h1>
+                                <p class="text-muted mb-2"> Order ID : <span class="fw-bold text-body" style="color: rgb(207, 14, 14) !important;">{{orderNumber}}</span>
+                                </p>
+                                <p class="text-muted mb-0"> Place On : <span class="fw-bold text-body">{{ currentDate | date: 'MMM-dd-yyyy' }}</span> </p>
+                            </div>                           
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <ul id="progressbar-1" class="mx-0 mt-0 mb-5 px-0 pt-0 pb-4">
+                            <li class="step0 active" id="step1"><span
+                                    style="margin-left: 22px; margin-top: 12px;">PENDING</span></li>
+                            <li class="step0  text-center" id="step2"><span>PROCESSING</span></li>
+                            <li class="step0 text-muted text-end" id="step3"><span
+                                    style="margin-right: 22px;">DELIVERED</span></li>
+                        </ul>
+                    </div>
+                    <p style="margin-left: 20px; margin-bottom: 30px;">
+                        We will contact you within 48 hours.
+                    </p>
+                    <button type="submit" class="btn btn-success" style="width: 100px; margin: auto; margin-bottom: 10px;" (click)="Close()">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

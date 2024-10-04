@@ -1,0 +1,201 @@
+{
+  "general": {
+    "loading": "Loading...."
+  },
+  "home": {
+    "carouselTitleOne": "Capturing Moments, One Click at a Time",
+    "carouselDescOne": "Explore stunning portfolios and find inspiration for your next photography project. Discover the beauty in every shot and share your own unique vision.",
+    "carouselButOne": "View Gallery",
+    "carouselTitleTwo": "Showcase Your Creativity",
+    "carouselDescTwo": "Join our community of photographers and bloggers. Share your stories, showcase your best work, and connect with others who share your passion for photography.",
+    "carouselButTwo": "Contact us",
+    "cardOne": "Shooting",
+    "cardDescOne": "Our shooting service captures precious moments with exceptional detail and clarity. Perfect for various events and occasions, we ensure high-quality images that reflect the true essence of the moment. Our talented team uses the latest technology to achieve the best lighting and angles for stunning photos.",
+    "cardTwo": "Videos",
+    "cardDescTwo": "We offer professional video recording services that capture your important moments with high definition and precision. Whether you need a promotional video, wedding coverage, or event documentation, we deliver videos that tell stories and convey emotions clearly.",
+    "cardThree": "Editing",
+    "cardDescThree": "Our editing service provides comprehensive enhancements to your photos and videos, making them more professional and engaging. Our skilled editing team uses the latest software to make necessary adjustments, from color correction and blemish removal to adding special effects.",
+    "CATEGORIES": "CATEGORIES",
+    "Viewall": "View All",
+    "OurlatestGalleries": "Our latest Galleries",
+    "LoadMore": "Load More"
+  },
+  "toastr": {
+  },
+  "buttons": {
+    "homebtn": "HOME",
+    "aboutbtn": "ABOUT",
+    "categorytn": "CATEGORIES",
+    "gallerybtn": "GALLERY",
+    "blogbtn": "BLOGS",
+    "contactbtn": "CONTACT",
+    "loginbtn": "Login",
+    "registerbtn": "Register",
+    "dashboard": "Dashboard"
+  },
+  "footer": {
+    "about": "We invite you to explore our platform and discover how PhotoVerse can elevate your photography blog to new heights.",
+    "home": "Home",
+    "aboutb": "About",
+    "contact": "Contact",
+    "gallery": "Gallery",
+    "blogs": "Blogs",
+    "categories": "Categories"
+  },
+  "contactInfo": {
+    "Instagram": "Instagram",
+    "Quicklinks": "Quick links",
+    "ContactInformation": "Contact Information",
+    "email": "asem.saleh992@yahoo.com",
+    "phone": "00962795747446",
+    "address": "Medina Street, Amman, Jordan",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "addresst": "Address"
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "about": "About",
+    "categories": "Categories",
+    "gallery": "Gallery",
+    "blog": "Blogs",
+    "contact": "Contact",
+    "service":"Services"
+  },
+  "aboutPage": {
+    "title": "About Us",
+    "welcomeMessage": "Welcome to the PhotoVerse ! We're thrilled you’ve decided to visit our corner of the web. Our mission is to empower photographers of all levels by providing a robust and user-friendly platform designed specifically for managing and showcasing their blogs.",
+    "whoWeAre": "Who We Are",
+    "whoWeAreText": "At PBMS, we are a passionate team of tech enthusiasts and photography lovers. Our team consists of experienced web developers, designers, and professional photographers who understand the unique challenges and needs of the photography community. With our combined expertise, we’ve created a platform that merges cutting-edge technology with creative freedom.",
+    "whatWeDo": "What We Do",
+    "whatWeDoText": "The PhotoVerse is designed to be your one-stop solution for all your blogging needs. Our platform offers a range of features including:",
+    "features": {
+      "professionalism": "Professionalism",
+      "approach": "Individual approach",
+      "schedule": "Flexible Schedule",
+      "experience": "Experience"
+    },
+    "team": {
+      "title": "Our Team",
+      "description": "Our team consists of passionate and professional photographers capturing unique moments. We are here to turn your vision into images that tell your stories.",
+      "members": [
+        {
+          "nameOne": "Alan Walker",
+          "roleOne": "Photographer"
+        },
+        {
+          "nameTwo": "Ava Max",
+          "roleTwo": "Director"
+        },
+        {
+          "nameThree": "Anne-Marie",
+          "roleThree": "Manager"
+        },
+        {
+          "nameFour": "Billie Eilish",
+          "roleFour": "Assistant"
+        }
+      ],
+      "socialMedia": {
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "youtube": "YouTube",
+        "instagram": "Instagram"
+      },
+      "appointmentButton": "Appointment"
+    }
+  },
+  "categoryPage": {
+    "title": "What We Do?",
+    "description": "We are giving you perfect solutions with our proficient services.",
+    "learnMore": "Learn More"
+  },
+  "blogPage": {
+    "post": "Feature posts",
+    "readMore": "Read More",
+    "comment": "Comment",
+    "by": "by"
+  },
+  "contactSection": {
+    "getInTouch": "Get in touch",
+    "contactMessage": "We'd love to hear from you! Whether you have questions, feedback, or just want to say hello, get in touch with us today.",
+    "address": "Address",
+    "addressValue": "Medina Street, Amman, Jordan",
+    "phone": "Phone",
+    "phoneValues": [
+      "00962795747446",
+      "00962797565813"
+    ],
+    "email": "Email",
+    "emailValue": "Asem.saleh992@yahoo.com",
+    "workWithMe": "Work with Me!",
+    "formLabels": {
+      "fullName": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "budget": "Budget",
+      "purpose": "Purpose",
+      "description": "Description"
+    },
+    "formPlaceholders": {
+      "fullName": "Eg. Charlie Brown",
+      "email": "Eg. example@email.com",
+      "phone": "Eg. 00962795747666",
+      "budget": "Eg. 300",
+      "purpose": "Eg. Wedding",
+      "description": "Eg. Looking for wedding photography ... etc"
+    },
+    "formErrors": {
+      "required": "is required"
+    },
+    "submitButton": "Submit",
+    "clearButton": "Clear"
+  },
+  "loginPage": {
+    "title": "Login",
+    "subTitle": "Have an account?",
+    "usernamePlaceholder": "Username",
+    "usernameError": "Username is required",
+    "passwordPlaceholder": "Password",
+    "passwordError": "Password is required",
+    "signInButton": "Sign In",
+    "rememberMe": "Remember Me",
+    "forgotPassword": "Forgot Password",
+    "registerMessage": "Don't have an account?",
+    "registerLink": "Register"
+  },
+  "registration": {
+    "header": "Registration",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "birthDate": "Birthdate",
+    "password": "Password",
+    "phone": "Phone number",
+    "imageUpload": "Image upload",
+    "isRequired": "is required",
+    "formPlaceholders": {
+      "firstName": "Eg. Fadi",
+      "lastName": "Eg. Mansor",
+      "email": "Eg. Fadi.Mansor@yahoo.com",
+      "password": "Eg. Fadiman22@",
+      "phone": "Eg. 00962794775666",
+      "passwordHint": "Password must be at least 6 characters long, contain at least one lowercase letter, one uppercase letter, one number, and one special character.",
+      "buttons": {
+        "clear": "Clear",
+        "submit": "Submit"
+      }
+    }
+  },
+  "blogDetails":{
+   "comments":"Comments",
+   "leaveComment":"LEAVE A COMMENT",
+   "submit":"SUBMIT",
+   "name":"Your Name",
+   "comment":"Your Comment",
+   "isRequired":"is required"
+  },
+  "servicePage":{
+   "serviceTitle":"Choose one of these services of"
+  }
+}

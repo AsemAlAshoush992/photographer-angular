@@ -1,0 +1,7 @@
+.custom-star {
+    font-size: 1.6em;
+    /* تغيير حجم الخط */
+    vertical-align: top;
+    /* لتعديل موضع النجمة بجانب النص */
+    margin-left: 5px;
+}

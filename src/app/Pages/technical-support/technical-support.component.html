@@ -1,0 +1,43 @@
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="contact-form">
+                    <h3>Technical Support</h3>
+                    <form #technicalForm="ngForm" (ngSubmit)="SendTechnicalSupport()">
+                        <div class="form-group">
+                            <label>Title <span class="required-star">*</span></label>
+                            <input type="text" [(ngModel)]="technicalSupport.title" name="title" class="form-control"
+                                placeholder="Eg. Photo Quality" required #title="ngModel" autofocus />
+                            <div *ngIf="title.invalid && title.touched" class="text-danger">Title is required</div>
+                        </div>
+                        <div class="form-group">
+                            <label>Purpose <span class="required-star">*</span></label>
+                            <input type="text" maxlength="50" [(ngModel)]="technicalSupport.purpose"
+                                name="purpose" class="form-control" placeholder="Eg. Service"
+                                required  #purpose="ngModel" />
+                            <div *ngIf="purpose.invalid && purpose.touched" class="text-danger">Purpose is required</div>
+                        </div>
+                        <div class="form-group">
+                            <label>Order Number <span class="required-star">*</span></label>
+                            <input type="number" [(ngModel)]="technicalSupport.orderId" name="orderId"
+                                class="form-control" placeholder="Eg. 2" required #orderId="ngModel"/>
+                            <div *ngIf="orderId.invalid && orderId.touched" class="text-danger">Order Number is required</div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description <span class="required-star">*</span></label>
+                            <textarea [(ngModel)]="technicalSupport.description" name="description"
+                                class="form-control" placeholder="Eg. Poor photo quality." rows="5" required
+                                #description="ngModel"></textarea>
+                            <div *ngIf="description.invalid && description.touched" class="text-danger">Description is required</div>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btnContact" style="margin-right: 15px;" [disabled]="technicalForm.invalid">Send Message</button>
+                            <button type="reset" class="btnContact">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

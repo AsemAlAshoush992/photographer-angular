@@ -1,0 +1,77 @@
+<!--NavBar-->
+<app-nav></app-nav>
+<!--End of NavBar-->
+<!-- Blog Details Section Begin -->
+<div class="blog-hero set-bg" data-setbg="../../../assets/img/blog/details/blog-hero.jpg">
+    <img src="../../../assets/img/blog/details/blog-hero.jpg" alt="">
+</div>
+<section class="blog-details-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="blog-details-text">
+                    <div class="bd-title">
+                        <div class="bt-bread" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}">
+                            <a routerLink=""><i class="fa fa-home"></i> {{'breadcrumb.home' | translate}}</a>
+                            <a routerLink="/blog-cards">{{'breadcrumb.blog' | translate}}</a>
+                            <span>{{blogDetails.title}}</span>
+                        </div>                        
+                        <h2>{{blogDetails.title}}</h2>
+                        <ul>
+                            <li [ngStyle]="{'direction': (locale === 'ar') ? 'rtl' : 'ltr', 'unicode-bidi': 'embed'}">{{'blogPage.by' | translate}} <span>{{blogDetails.authorName}}</span></li>
+                            <li>{{blogDetails.blogDate | date: 'MMM-dd-yyyy'}}</li>
+                            <li [ngStyle]="{'direction': (locale === 'ar') ? 'rtl' : 'ltr', 'unicode-bidi': 'embed'}">{{blogDetails.comments?.length}} {{'blogPage.comment' | translate}}</li>
+                        </ul>
+                    </div>
+                    <div class="bd-top-text">
+                        <p>{{blogDetails.article}}</p>
+                    </div>
+                    <div class="bd-pics">
+                        <img *ngFor="let image of blogDetails.blogAttachments" [src]="image.path" style="height: 200px ;">
+
+                    </div>
+                    <div class="bd-comment-form">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>{{'blogDetails.comments' | translate}}</h4>
+                                <div *ngIf="blogDetails && blogDetails.comments && blogDetails.comments.length > 0; else noComments">
+                                    <div class="comment-item" *ngFor="let comment of blogDetails.comments">
+                                        <div class="ci-text">
+                                            <h5>{{comment.authorName}}</h5>
+                                            <p>{{comment.content}}</p>
+                                            <ul>
+                                                <li><i class="fa fa-clock-o"></i> {{comment.commentDate | date:
+                                                    'MMM-dd-yyyy'}}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ng-template #noComments>
+                                    <p>No comments</p>
+                                </ng-template>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="leave-form">
+                                    <h4>{{'blogDetails.leaveComment' | translate}}</h4>
+                                    <form #commentForm="ngForm"   (ngSubmit)="CreateComment()">
+                                        <input type="text" placeholder="{{'blogDetails.name' | translate}}"   [(ngModel)]="createComment.authorName" name="authorName"
+                                        #authorName="ngModel"  minlength="4" required>
+                                        <div *ngIf="authorName.invalid && authorName.touched" class="text-danger">{{'blogDetails.name' | translate}} {{'blogDetails.isRequired' | translate}}</div>
+                                        <textarea placeholder="{{'blogDetails.comment' | translate}}"   [(ngModel)]="createComment.content" name="content"
+                                        #content="ngModel"  required></textarea>
+                                        <div *ngIf="content.invalid && content.touched" class="text-danger">{{'blogDetails.comment' | translate}} {{'blogDetails.isRequired' | translate}}</div>
+                                        <button type="submit" class="site-btn" [disabled]="commentForm.invalid">{{'blogDetails.submit' | translate}}</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Blog Details Section End -->
+<!-- Footer Section Begin -->
+<app-footer></app-footer>
+<!-- Footer Section End -->

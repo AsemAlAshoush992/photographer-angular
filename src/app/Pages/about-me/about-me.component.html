@@ -1,0 +1,178 @@
+<app-nav></app-nav>
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="bo-links" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}" >
+                    <a  href="./index.html" ><i class="fa fa-home" ></i>{{'breadcrumb.home' | translate}}  </a>
+                    <span>{{'breadcrumb.about' | translate}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+    <!-- About Section Begin -->
+    <section class="about-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 p-0">
+                    <div class="about-pic set-bg" data-setbg="../../../assets/img/about/Asem Alashoush.jpg">
+                        <!--<a href="https://www.youtube.com/watch?v=hxADTEJalRw&list=WL&index=49&t=0s" class="play-btn video-popup"><i class="fa fa-play"></i></a>-->
+                        <img src="../../../assets/img/about/about-pic.jpg" alt="" height="960px" width="819px">
+                    </div>
+                </div>
+                <div class="col-lg-6 p-0">
+                    <div class="about-text" >
+                        <div class="section-title" [ngStyle]="{
+                            'direction': (locale === 'ar') ? 'rtl' : 'ltr',
+                            'unicode-bidi': 'embed',
+                            'margin-right': (locale === 'ar') ? '20px' : '5px'
+                          }">
+                            <h3 >{{'aboutPage.title' | translate}}</h3>
+                            <p>{{'aboutPage.welcomeMessage' | translate}}
+                            </p>
+                            <h3>{{'aboutPage.whoWeAre' | translate}}</h3>
+                            <p>
+                                {{'aboutPage.whoWeAreText' | translate}}
+                            </p>
+                            <h3>{{'aboutPage.whatWeDo' | translate}}</h3>
+                            <p>
+                                {{'aboutPage.whatWeDoText' | translate}}
+                            </p>
+                        </div>
+                        <div class="at-list"  [ngStyle]="{
+                            'text-align': (locale === 'ar') ? 'right' : 'left',
+                            'unicode-bidi': 'embed',
+                            'margin-right': (locale === 'ar') ? '20px' : '5px'
+                          }">
+                            <div class="al-item" [ngClass]="{'text-right': locale === 'ar', 'text-left': locale === 'en'}" style="display: flex; align-items: center;">
+                                <div class="al-pic"  [ngStyle]="{
+                            'margin-right' :(locale === 'ar') ? '70px' : '0px' }"  >
+                                    <img src="../../../assets/img/about/list-1.png" alt="" height="40px" width="40px" >
+                                </div>
+                                <div class="al-text">
+                                    <h5>{{'aboutPage.features.professionalism' | translate}}</h5>
+                                </div>
+                            </div>
+                            <div class="al-item"  [ngClass]="{'text-right': locale === 'ar', 'text-left': locale === 'en'}" style="display: flex; align-items: center;">
+                                <div class="al-pic" [ngStyle]="{
+                            'margin-right' :(locale === 'ar') ? '50px' : '0px' }" >
+                                    <img src="../../../assets/img/about/list-2.png" alt="" height="40px" width="40px">
+                                </div>
+                                <div class="al-text">
+                                    <h5>{{'aboutPage.features.approach' | translate}}</h5>
+                                </div>
+                            </div>
+                            <div class="al-item" [ngClass]="{'text-right': locale === 'ar', 'text-left': locale === 'en'}" style="display: flex; align-items: center;">
+                                <div class="al-pic" [ngStyle]="{
+                            'margin-right' :(locale === 'ar') ? '67px' : '0px' }" >
+                                    <img src="../../../assets/img/about/list-3.png" alt="" height="40px" width="40px">
+                                </div>
+                                <div class="al-text">
+                                    <h5>{{'aboutPage.features.schedule' | translate}}</h5>
+                                </div> 
+                            </div>
+                            <div class="al-item" [ngClass]="{'text-right': locale === 'ar', 'text-left': locale === 'en'}" style="display: flex; align-items: center;">
+                                <div class="al-pic" [ngStyle]="{
+                            'margin-right' :(locale === 'ar') ? '97px' : '0px' }" >
+                                    <img src="../../../assets/img/about/list-4.png" alt="" height="40px" width="40px">
+                                </div>
+                                <div class="al-text">
+                                    <h5>{{'aboutPage.features.experience' | translate}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Team Section Begin -->
+    <section class="team-section spad">
+        <div class="container">
+            <div class="row" [ngStyle]="{'direction': (locale === 'ar') ? 'rtl' : 'ltr', 'unicode-bidi': 'embed'}" >
+                <div class="col-lg-6 col-md-6">
+                    <div class="section-title">
+                        <h2>{{'aboutPage.team.title' | translate}}</h2>
+                        <p>{{'aboutPage.team.description' | translate}}</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6"  [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}" >
+                    <div class="right-btn"  >
+                        <a routerLink="/contact-request" class="primary-btn" >{{'aboutPage.team.appointmentButton' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team-item">
+                        <img src="../../../assets/img/team/team-1.jpg" alt="">
+                        <div class="ti-text">
+                            <h5>{{'aboutPage.team.members.'+0+'.nameOne' | translate}}</h5>
+                            <span>{{'aboutPage.team.members.'+0+'.roleOne' | translate}}</span>
+                            <div class="ti-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team-item">
+                        <img src="../../../assets/img/team/team-2.jpg" alt="">
+                        <div class="ti-text">
+                            <h5>{{'aboutPage.team.members.'+1+'.nameTwo' | translate}}</h5>
+                            <span>{{'aboutPage.team.members.'+1+'.roleTwo' | translate}}</span>
+                            <div class="ti-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team-item">
+                        <img src="../../../assets/img/team/team-3.jpg" alt="">
+                        <div class="ti-text">
+                            <h5>{{'aboutPage.team.members.'+2+'.nameThree' | translate}}</h5>
+                            <span>{{'aboutPage.team.members.'+2+'.roleThree' | translate}}</span>
+                            <div class="ti-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="team-item">
+                        <img src="../../../assets/img/team/team-4.jpg" alt="">
+                        <div class="ti-text">
+                            <h5>{{'aboutPage.team.members.'+3+'.nameFour' | translate}}</h5>
+                            <span>{{'aboutPage.team.members.'+3+'.roleFour' | translate}}</span>
+                            <div class="ti-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section End -->
+     <!-- Footer Section Begin -->
+    <app-footer></app-footer>
+    <!-- Footer Section End -->
+ 

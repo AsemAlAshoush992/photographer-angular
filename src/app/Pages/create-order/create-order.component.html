@@ -1,0 +1,45 @@
+<div class="container my-5">
+    <h2 class="text-center mb-4">Order Details</h2>
+  
+    <!-- Display Selected Service Details -->
+    <div class="card mb-4 shadow-lg">
+      <div class="row no-gutters">
+        <div class="col-md-4">
+          <img [src]="serviceObj.imagePath" class="card-img" alt="Service Image">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h3 class="card-title">{{serviceObj.name}}</h3>
+            <p class="card-text text-muted">{{serviceObj.description}}</p>
+            <div class="mb-2"><strong>Discount:</strong> {{serviceObj.disacountAmount}}</div>
+            <div class="mb-2"><strong>Price:</strong> {{serviceObj.price}}</div>
+            <div class="mb-2"><strong>Quantity:</strong> {{serviceObj.quantity}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- User Form for Order Confirmation -->
+    <form class="bg-light p-4 rounded shadow-sm"  #createOrderForm="ngForm"  (ngSubmit)="onConfirmOrder()">
+        <h5 class="mb-3">Confirm Your Order</h5>
+        <div class="mb-3">
+            <label for="paymentMethod" class="form-label">Payment Method<span
+              class="text-danger custom-star">*</span></label>
+            <select class="form-control" id="paymentMethod" name="paymentMethod" ngModel  (change)="onPaymentMethodChange($event)" autofocus required>
+                <option value="" disabled >Select a payment method</option>
+                <option value="Cash">Cash</option>
+                <option value="OrangeMoney">OrangeMoney</option>
+                <option value="ZainCash">ZainCash</option>
+                <option value="efawaTeercom">efawaTeercom</option>
+                <option value="MasterCard">MasterCard</option>
+                <option value="Paypal">Paypal</option>
+                <option value="CreditCard">CreditCard</option>
+                <option value="Cliq">Cliq</option>
+            </select>
+            <div *ngIf="createOrderForm.controls['paymentMethod'] && !createOrderForm.controls['paymentMethod'].valid && createOrderForm.controls['paymentMethod'].touched" class="text-danger">Payment method is required</div>
+        </div>
+  
+      <button type="submit" class="btn btn-success btn-block"
+      [disabled]="createOrderForm.invalid">Confirm Order</button>
+    </form>
+</div>

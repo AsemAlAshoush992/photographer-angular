@@ -1,0 +1,30 @@
+<style>
+    .home-btn,
+    .contact-btn {
+        color: white !important;
+        /* لتغيير لون النص إلى الأبيض إذا لزم الأمر */
+        padding: 10px 20px;
+        /* يمكنك تعديل الحشوة حسب الحاجة */
+        border-radius: 5px;
+        border-color: white !important;
+        /* يمكنك تعديل الزوايا حسب الحاجة */
+        text-decoration: none;
+        /* إزالة الخط السفلي من الرابط */
+        background-color: #28a745 !important;
+    }
+    .contact-btn{
+        background:none !important;
+    }
+</style>
+
+<div id="notfound">
+    <div class="notfound-bg"></div>
+    <div class="notfound">
+        <div class="notfound-404">
+            <h1>404</h1>
+        </div>
+        <h2>we are sorry, but the page you requested was not found</h2>
+        <a routerLink="" class="home-btn">Go Home</a>
+        <a routerLink="/contact-request" class="contact-btn">Contact us</a>
+    </div>
+</div>

@@ -1,0 +1,74 @@
+
+/*tabs*/
+
+
+
+
+.pb-video-container {
+  padding-top: 20px;
+  background: white;
+  font-family: Lato;
+}
+
+.pb-video {
+  border: 1px solid #e6e6e6;
+  padding: 5px;
+}
+
+.pb-video:hover {
+  background: #009603;
+}
+
+.pb-video-frame {
+  transition: width 2s, height 2s;
+}
+
+.pb-video-frame:hover {
+  height: 300px;
+}
+
+.pb-row {
+  margin-bottom: 10px;
+}
+
+
+/* إعادة تعيين التنسيق الافتراضي */
+.bo-links {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* مسافة بين العناصر */
+  list-style: none; /* إلغاء أي تنسيقات للـ breadcrumbs */
+  padding: 0;
+  margin: 0;
+  direction: ltr; /* الاتجاه الافتراضي يكون من اليسار إلى اليمين */
+}
+
+.bo-links a {
+  text-decoration: none; /* إزالة التسطير أسفل الروابط */
+  color: inherit; /* جعل النص يأخذ لون النص الافتراضي */
+  font-weight: 500; /* تنسيق النص في الروابط */
+}
+
+/* إضافة الإشارة (>) بعد الروابط */
+.bo-links a::after {
+  content: '>';
+  margin: 0 8px; /* ضبط المسافة بين الإشارة والنص */
+  color: #000; /* لون الإشارة */
+}
+
+/* إزالة الإشارة من العنصر الأخير */
+.bo-links span::after {
+  content: '';
+}
+
+/* عند التحول للغة العربية (RTL) */
+.bo-links.rtl {
+  direction: rtl; /* عكس اتجاه النص */
+}
+
+.bo-links.rtl a::after {
+  content: '<'; /* عكس الإشارة إلى اليسار */
+  margin: 0 8px; /* مسافة بين الإشارة والنص */
+}
+
+

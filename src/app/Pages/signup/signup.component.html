@@ -1,0 +1,112 @@
+<section class="h-100 bg-dark">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col">
+        <div class="card card-registration my-4">
+          <div class="row g-0">
+            <div class="col-xl-5 d-none d-xl-block">
+              <img src="https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/45522/article_aligned%402x.jpg"
+                alt="Sample photo" class="img-fluid"
+                style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: 660px !important" />
+
+            </div>
+            <div class="col-xl-6">
+              <div class="card-body p-md-5 text-black">
+                <h1 class="mb-5 text-uppercase" style="font-weight: 600;" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}" >{{'registration.header' | translate}}</h1>
+                <form #registerForm="ngForm" (ngSubmit)="Register()" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form3Example1m">{{'registration.firstName' | translate}}<span
+                            class="text-danger custom-star">*</span></label>
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}"
+                          [(ngModel)]="registerObj.firstName" name="firstName" required placeholder="{{'registration.formPlaceholders.firstName' | translate}}" autofocus
+                          #firstName="ngModel" minlength="3" />
+                        <div *ngIf="firstName.invalid && firstName.touched" class="text-danger">{{'registration.firstName' | translate}} {{'registration.isRequired' | translate}}
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form3Example1n">{{'registration.lastName' | translate}}<span
+                            class="text-danger custom-star">*</span></label>
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg" [ngStyle]="{'text-align': locale === 'ar' ? 'right' : 'left'}"
+                          [(ngModel)]="registerObj.lastName" name="lastName" required placeholder="{{'registration.formPlaceholders.lastName' | translate}}"
+                          #lastName="ngModel" minlength="5" />
+                        <div *ngIf="lastName.invalid && lastName.touched" class="text-danger">{{'registration.lastName' | translate}} {{'registration.isRequired' | translate}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form3Example1m1">{{'registration.email' | translate}}<span
+                            class="text-danger custom-star">*</span></label>
+                        <input type="email" id="form3Example1m1" class="form-control form-control-lg"
+                          [(ngModel)]="registerObj.email" name="email" required placeholder="{{'registration.formPlaceholders.email' | translate}}"
+                          #email="ngModel" />
+                        <div *ngIf="email.invalid && email.touched" class="text-danger">{{'registration.email' | translate}} {{'registration.isRequired' | translate}}</div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div data-mdb-input-init class="form-outline">
+                        <label class="form-label" for="form3Example1n1">{{'registration.birthDate' | translate}}<span
+                            class="text-danger custom-star">*</span></label>
+                        <input type="date" id="form3Example1n1" class="form-control form-control-lg"
+                          [(ngModel)]="registerObj.birthDate" name="birthDate" required #birthDate="ngModel" />
+                        <div *ngIf="birthDate.invalid && birthDate.touched" class="text-danger">{{'registration.birthDate' | translate}} {{'registration.isRequired' | translate}}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-4" style="position: relative;">
+                      <label class="form-label" for="form3Example1m1">{{'registration.password' | translate}}<span
+                          class="text-danger custom-star">*</span></label>
+                      <input [type]="passwordFieldType" minlength="9" maxlength="30" id="form3Example1m1"
+                        class="form-control form-control-lg" [(ngModel)]="registerObj.password" name="password" required
+                        placeholder="{{'registration.formPlaceholders.password' | translate}}" #password="ngModel" 
+                        style="padding-right: 40px;"/>
+                      <span class="fa fa-fw field-icon" style=" position: absolute; right: 20px; top: 45%; transform: translateY(-50%); cursor: pointer;"
+                        [ngClass]="{'fa-eye': passwordFieldType === 'password', 'fa-eye-slash': passwordFieldType === 'text'}"
+                        (click)="togglePassword()"></span>
+                      <small class="form-text text-muted">
+                        {{'registration.formPlaceholders.passwordHint' | translate}}
+                      </small>
+                      <div *ngIf="password.invalid && password.touched" class="text-danger">{{'registration.password' | translate}} {{'registration.isRequired' | translate}}</div>
+                    </div>
+                  </div>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="form3Example90">{{'registration.phone' | translate}}<span
+                        class="text-danger custom-star">*</span></label>
+                    <input type="text" maxlength="14" minlength="14" id="form3Example90"
+                      class="form-control form-control-lg" [(ngModel)]="registerObj.phone" name="phone" required
+                      placeholder="{{'registration.formPlaceholders.phone' | translate}}" #phone="ngModel" />
+                    <div *ngIf="phone.invalid && phone.touched" class="text-danger">{{'registration.phone' | translate}} {{'registration.isRequired' | translate}}</div>
+                  </div>
+
+                  <div data-mdb-input-init class="form-outline mb-4">
+                    <label class="form-label" for="form3Example99">{{'registration.imageUpload' | translate}}</label>
+                    <input type="file" id="form3Example99" class="form-control form-control-lg"
+                      (change)="onFileSelected($event)" required />
+                  </div>
+
+                  <div class="d-flex justify-content-end pt-3">
+                    <button type="reset" data-mdb-button-init data-mdb-ripple-init class="btn btn-light btn-lg">
+                      {{'registration.formPlaceholders.buttons.clear' | translate}}
+                    </button>
+                    <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-success btn-lg ms-2"
+                      [disabled]="registerForm.invalid">{{'registration.formPlaceholders.buttons.submit' | translate}}</button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
